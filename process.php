@@ -1,12 +1,16 @@
 <?php
-
+$error = '';
+if(empty($_POST['user']) || empty($_POST['pass'])){
+  echo 'Username or Password is invalid';
+  header('location: login.php');
+  $error = "Username or Password is invalid";
+  exit;
+} else{
 $User = $_POST['user'];
 $pass = $_POST['pass'];
 
 $User = stripcslashes($User);
 $pass = stripcslashes($pass);
-//$User = mysql_real_escape_string($User);
-//$pass = mysql_real_escape_string($pass);
 
 $conn = mysqli_connect('127.0.0.1','bot','botpass','bot');
 
@@ -19,11 +23,12 @@ $result = mysqli_query($conn,"SELECT * from login where User='$User' AND pass='$
 $row = mysqli_fetch_array($result);
 
 //$result=mysqli_query($conn, $sql);
-
 if ($row['User'] == $User && $row['pass'] == $pass ) {
   echo "login success".$row['User'];
 }else{
-  echo "failed" ;
+  echo '<script>alert("failed")</script>' ;
+  header('Location: login.php');
+  exit;
 }
-
+}
 ?>

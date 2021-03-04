@@ -107,7 +107,7 @@ text-decoration: none
     <form class="form1" action="process.php" method="POST">
       <input class="un " name="user" type="text" align="center" placeholder="USN">
       <input class="pass" name="pass" type="password" align="center" placeholder="DDMMYYYY">
-      <input class="btn-login" type="submit" value="login" align="center">
+      <input class="btn-login" name="submit" type="submit" value="login" align="center">
       <p class="trouble" align="center"><a href=#>Trouble?</a></p>
     </form>
   </div>
