@@ -25,7 +25,7 @@ $row = mysqli_fetch_array($result);
 //$result=mysqli_query($conn, $sql);
 if ($row['User'] == $User && $row['pass'] == $pass ) {
   echo "login success".$row['User'];
-//  header('Location: notes/homepage.html');
+  header('Location: botpage.html');
 }else{
   echo '<script>alert("failed")</script>' ;
   header('Location: login.html');
