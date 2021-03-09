@@ -2,7 +2,7 @@
 $error = '';
 if(empty($_POST['user']) || empty($_POST['pass'])){
   echo 'Username or Password is invalid';
-  header('location: login.php');
+  header('location: login.html');
   $error = "Username or Password is invalid";
   exit;
 } else{
@@ -28,7 +28,7 @@ if ($row['User'] == $User && $row['pass'] == $pass ) {
 //  header('Location: notes/homepage.html');
 }else{
   echo '<script>alert("failed")</script>' ;
-  header('Location: login.php');
+  header('Location: login.html');
   exit;
 }
 }
