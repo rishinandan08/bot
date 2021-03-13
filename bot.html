@@ -3,8 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>bot</title>
+    <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
   </head>
+
+  <style>
+    .chat_icon{
+      position: fixed;
+      right: 30px;
+      bottom: 20px;
+      font-size: 60px;
+      color: #00bfff;
+      cursor: pointer;
+      z-index: 0;
+    }
+    .chat_box{
+      position: fixed;
+      right: 20px;
+      bottom: 100px;
+      width: 400px;
+      height: 75vh;
+      background: #dedede;
+      z-index: 0;
+      transition: all 0.3s ease-out;
+      //transform: scaleY(0);
+    }
+    .qchat_box.active{
+      transform: scaleY(1);
+    }
+  </style>
+
   <body>
     <p>hello welcome to bot page</p>
+    <div class="chat_icon">
+      <i class="fas fa-comments"></i>
+    </div>
+    <div class="chat_box">
+
+    </div>
+
   </body>
 </html>
