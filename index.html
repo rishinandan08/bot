@@ -3,17 +3,289 @@
   <head>
     <meta charset="utf-8">
     <title>BOT</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="img/RANS.png" type="image/x-icon">
   </head>
-  <body>
-    <h2>Welcome to homepage</h2>
-    <button type="button" name="button" onclick="login()">login</button>
-    <script>
-      function login(){
-        location.replace("login.html")
+
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    .bgimg-1{
+      background-image: url('img/main.jpg');
+      background-position: center;
+      background-size: covern;
+      min-height: 89%;
+    }
+    /*Success mgg status*/
+    #status {
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      padding: 10px;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+    #status.success {
+      background-color: rgb(211, 250, 153);
+      animation: status 4s ease forwards;
+    }
+    #status.error {
+      background-color: rgb(250, 129, 92);
+      color: white;
+      animation: status 4s ease forwards;
+    }
+    @keyframes status {
+      0% {
+        opacity: 1;
+        pointer-events: all;
       }
-    </script>
-    <p>here you can see.........</p>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <p>nice</p>
+      90% {
+        opacity: 1;
+        pointer-events: all;
+      }
+      100% {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+  </style>
+
+
+  <body>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-blue w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">RANS</a>
+
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      </div>
+
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="_open()">
+      <i class="fa fa-bars"></i>
+      </a>
+      <a href="login.html" class="w3-bar-item w3-button w3-right"><i class="fa fa-lock"></i> LOGIN</a>
+    </div>
+  </div>
+
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-blue w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="_close()" class="w3-bar-item w3-button w3-large w3-padding-16 w3-black">Close ×</a>
+    <a href="#about" onclick="_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#team" onclick="_close()" class="w3-bar-item w3-button">TEAM</a>
+    <a href="#work" onclick="_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="#contact" onclick="_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
+
+  <!-- Header with full-height image -->
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-black" style="padding:48px">
+      <span class="w3-jumbo w3-hide-small w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" style="border-radius:20px" >Welcome To Humanizer Bot</span><br>
+      <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome To Humanizer Bot</span><br>
+      <span class="w3-large">Get info from anywhere anytime with one click.</span>
+      <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more about us</a></p>
+    </div>
+  </header>
+
+
+  <!-- About Section -->
+  <div class="w3-container" style="padding:128px 16px" id="about">
+    <h3 class="w3-center">ABOUT THE RANS</h3>
+    <p class="w3-center w3-large">Key features of our RANS</p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-quarter">
+        <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+        <p class="w3-large">Responsive</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Passion</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Design</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Support</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Team Section -->
+  <div class="w3-container" style="padding:128px 16px" id="team">
+    <h3 class="w3-center">THE TEAM</h3>
+    <p class="w3-center w3-large">The ones who runs the website</p>
+    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="img/rishi.jpg" alt="rishi" style="width:100%">
+          <div class="w3-container">
+            <h3>Rishi Nandan</h3>
+            <p class="w3-opacity">TEAM MEMBER</p>
+            <p>about Rishi.</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> More Info</button></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="img/nithusha.jpeg" alt="nithusha" style="width:100%">
+          <div class="w3-container">
+            <h3>Nithusha</h3>
+            <p class="w3-opacity">TEAM MEMBER</p>
+            <p>About Nithusha.</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> More Info</button></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="img/shruthi.jpeg" alt="shruthi" style="width:100%">
+          <div class="w3-container">
+            <h3>Shruthi</h3>
+            <p class="w3-opacity">TEAM MEMBER</p>
+            <p>About Shruthi.</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> More Info</button></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="img/aarti.jpeg" alt="aarti" style="width:100%">
+          <div class="w3-container">
+            <h3>Aarti</h3>
+            <p class="w3-opacity">TEAM MEMBER</p>
+            <p>About Aarti.</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> More Info</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+    <h3 class="w3-center">CONTACT</h3>
+    <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+    <div style="margin-top:48px">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Banglore, India</p>
+      <p><i class="fa fa-building fa-fw w3-xxlarge w3-margin-right"></i> Jain (Deemed-to-be) University</p>
+      <!--<p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: rans@gmail.com</p>-->
+      <br>
+      <!-- change the action form-->
+      <form action="https://formspree.io/f/moqyqrvp" target="_blank" method="POST" id="my-form">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="w3-button w3-black" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+      <div id="status"></div>
+      <!-- Image of location/map --> <!--Should create a map.jpg pic-->
+      <img src="img/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <!--
+    <div class="w3-xlarge w3-section">
+      <a href="https://www.google.com"><p class="fa fa-facebook-official w3-hover-opacity"></p></a>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    -->
+    <p>Powered by <a href="#home" title="rans" target="_blank" class="w3-hover-text-green">RANS</a></p>
+  </footer>
+
+  <script>
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function _open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+
+
+    // Close the sidebar with the close button
+    function _close() {
+        mySidebar.style.display = "none";
+    }
+    window.addEventListener("DOMContentLoaded", function () {
+      // get the form elements defined in your form HTML above
+      var form = document.getElementById("my-form");
+      // var button = document.getElementById("my-form-button");
+      var status = document.getElementById("status");
+      // Success and Error functions for after the form is submitted
+      function success() {
+        form.reset();
+        status.classList.add("success");
+        status.innerHTML = "Thanks!";
+      }
+      function error() {
+        status.classList.add("error");
+        status.innerHTML = "Oops! There was a problem.";
+      }
+      // handle the form submission event
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+      });
+    });
+    // helper function for sending an AJAX request
+    function ajax(method, url, data, success, error) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          success(xhr.response, xhr.responseType);
+        } else {
+          error(xhr.status, xhr.response, xhr.responseType);
+        }
+      };
+      xhr.send(data);
+    }
+
+
+
+  </script>
   </body>
 </html>
