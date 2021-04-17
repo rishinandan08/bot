@@ -2,7 +2,7 @@
 $error = '';
 if(empty($_POST['user']) || empty($_POST['pass'])){
   echo 'Username or Password is invalid';
-  header('location: login.html');
+  header('location: index.html');
   $error = "Username or Password is invalid";
   exit;
 } else{
@@ -26,7 +26,7 @@ $row = mysqli_fetch_array($result);
 if ($row['User'] == $User && $row['pass'] == $pass ) {
   header('Location: bot.html');
 }else{
-  header('Location: login.html');
+  header('Location: index.html');
   exit;
 }
 }

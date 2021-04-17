@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="icon" href="img/RANS.png" type="image/x-icon">
   </head>
 
@@ -20,9 +21,10 @@
     }
     .bgimg-1{
       background-image: url('img/main.jpg');
-      background-position: center;
-      background-size: covern;
-      min-height: 89%;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100%;
     }
     /*Success mgg status*/
     #status {
@@ -57,10 +59,150 @@
       }
     }
 
+
+/*login page style start*/
+    .body {
+    background-color: #F3EBF6;
+    font-family: 'Ubuntu', sans-serif;
+    }
+
+    .bot {
+    padding-top: 40px;
+    color: #00BFFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    }
+    .un {
+    width: 76%;
+    color: #00BFFF;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+    form.form1 {
+    padding-top: 30px;
+    }
+    .pass {
+    width: 76%;
+    color: #00BFFF;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+    .un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    }
+    .btn-login {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #1E90FF, #00BFFF);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    font-size: 14px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    }
+    .trouble {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #00BFFF;
+    padding-top: 20px;
+    text-decoration: none;
+    }
+    @media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+      }
+    }
+
+    /* popup style*/
+    .Modal {
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 9999;
+      width: 100%;
+      height: 100%;
+      padding-top: 50px;
+      background-color: black;
+      background-color: rgba(0, 0, 0, 0.4);
+      -webkit-transition: 0.5s;
+      overflow: auto;
+      transition: all 0.3s linear;
+    }
+    .Modal-content {
+      background-color: #000000;
+      margin: 7em auto;
+      padding: 10px;
+      border-radius: 4px;
+      width: 350px;
+      height: 400px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.75rem;
+      border-radius: 1.5em;
+      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+    .ModalOpen { overflow: hidden; }
+    .is-hidden { display: none; }
+    .is-visuallyHidden { opacity: 0; }
+
+    /*style and position of the close button*/
+    .Close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 16px;
+    }
+    .Close:hover, .Close:focus {
+      color: #00BFFF;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /*blur the main content using CSS3 filters*/
+    .is-blurred {
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+    }
+
+
+/*login page style end*/
+
   </style>
 
 
-  <body>
+<body>
+
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div class="w3-bar w3-blue w3-card" id="myNavbar">
@@ -78,7 +220,7 @@
       <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="_open()">
       <i class="fa fa-bars"></i>
       </a>
-      <a href="login.html" class="w3-bar-item w3-button w3-right"><i class="fa fa-lock"></i> LOGIN</a>
+      <a class="w3-bar-item w3-button w3-right" id="myBtn"><i class="fa fa-lock"></i> LOGIN</a>
     </div>
   </div>
 
@@ -92,59 +234,59 @@
     <a href="#contact" onclick="_close()" class="w3-bar-item w3-button">CONTACT</a>
   </nav>
 
+
   <!-- Header with full-height image -->
   <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-black" style="padding:48px">
-      <span class="w3-jumbo w3-hide-small w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" style="border-radius:20px" >Welcome To Humanizer Bot</span><br>
-      <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome To Humanizer Bot</span><br>
+      <span class="w3-xxxlarge w3-hide-small w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" style="border-radius:20px" >Welcome To Humanizer Bot</span><br>
+      <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome To Humanizer Bot</span><br><br>
       <span class="w3-large">Get info from anywhere anytime with one click.</span>
       <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more about us</a></p>
     </div>
   </header>
 
-
+<main id="myContainer" class="MainContainer">
   <!-- About Section -->
-  <div class="w3-container" style="padding:128px 16px" id="about">
-    <h3 class="w3-center">ABOUT THE RANS</h3>
-    <p class="w3-center w3-large">Key features of our RANS</p>
+  <div class="w3-container w3-dark-grey" style="padding:128px 16px" id="about">
+    <h3 class="w3-center"><b>ABOUT THE RANS</b></h3>
+    <div class="w3-center">
+      <p>RANS-an exclusive bot for Jain university that supports students and teachers to build their relationship with each other by knowing essential professional information.it also includes technologies like speech-to-text conversion and vice-versa, image recognition for libraries to check the availability of book or novels, obtain notes for reference, to know the updated calendar of events, current tech news etc.<br>
+        With the invention of latest technology, chatbots allows users to complete specific tasks quickly at their own comfort and ease which are accurate, user-friendly, and reliable.</p>
+    </div>
+    <p class="w3-center w3-large"><b>Key features of our RANS</b></p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
-      <div class="w3-quarter">
+      <div class="w3-half">
         <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-        <p class="w3-large">Responsive</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large"><b>Responsive</b></p>
+        <p>This particular website is highly responsive as it renders and function efficiently in all the devices,regardless of the screensize, Operating System or browser versions.</p>
       </div>
-      <div class="w3-quarter">
-        <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-        <p class="w3-large">Passion</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-      </div>
-      <div class="w3-quarter">
-        <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-        <p class="w3-large">Design</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-      </div>
-      <div class="w3-quarter">
+      <div class="w3-half">
         <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-        <p class="w3-large">Support</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large"><b>Support</b></p>
+        <p>The major support that rans provides is the reduction of the manual working system by easing out our work through various innovative technologies which saves a lot of time and effort and also need for connectedness, provides 24/7 services and is approachable as well as user satisfactory.</p>
       </div>
     </div>
   </div>
-
+</main>
 
   <!-- Team Section -->
-  <div class="w3-container" style="padding:128px 16px" id="team">
-    <h3 class="w3-center">THE TEAM</h3>
-    <p class="w3-center w3-large">The ones who runs the website</p>
+  <div class="w3-container" style="padding:95px 16px" id="team">
+    <h3 class="w3-center"><b>THE TEAM</b></h3>
+    <p class="w3-center w3-large"><b>The supervisors of this website</b></p>
     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
           <img src="img/rishi.jpg" alt="rishi" style="width:100%">
           <div class="w3-container">
-            <h3>Rishi Nandan</h3>
+            <h3>T.Sai Mani Rishi Nandan</h3>
             <p class="w3-opacity">TEAM MEMBER</p>
-            <p>about Rishi.</p>
-            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> More Info</button></p>
+            <p>Student at Jain University and an innovative thinker.</p>
+            <div class="w3-xlarge w3-section w3-center">
+              <a href="https://www.instagram.com/rishi_nandan2001/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+              <a href="mailto:rishitummalapudi@gmail.com?cc=rans@gmail.com,&subject=Mail from RANS Website&body=Hello Rishi Nandan," target="_blank"><i class="fa fa-envelope w3-hover-opacity"></i></a>
+              <a href="https://twitter.com/Rishinandan15" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+              <a href="https://www.linkedin.com/in/sai-mani-rishinandan-tummalapudi/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -152,32 +294,47 @@
         <div class="w3-card">
           <img src="img/nithusha.jpeg" alt="nithusha" style="width:100%">
           <div class="w3-container">
-            <h3>Nithusha</h3>
+            <h3>M.B.Nithusha</h3>
             <p class="w3-opacity">TEAM MEMBER</p>
-            <p>About Nithusha.</p>
-            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> More Info</button></p>
+            <p>Student at Jain University and an ambitious and diligent women.</p>
+            <div class="w3-xlarge w3-section w3-center">
+              <a href="https://www.instagram.com/nithusha_nithu19/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+              <a href="mailto:nithusha19@gmail.com?cc=rans@gmail.com,&subject=Mail from RANS Website&body=Hello Nithusha," target="_blank"><i class="fa fa-envelope w3-hover-opacity"></i></a>
+              <a href="https://twitter.com/nithusha12" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+              <a href="https://www.linkedin.com/in/nithusha-matta-463aa31b3/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+            </div>
           </div>
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="img/shruthi.jpeg" alt="shruthi" style="width:100%">
+          <img src="img/shruthi1.jpeg" alt="shruthi" style="width:100%">
           <div class="w3-container">
-            <h3>Shruthi</h3>
+            <h3>Shruthi Satish Kumar</h3>
             <p class="w3-opacity">TEAM MEMBER</p>
-            <p>About Shruthi.</p>
-            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> More Info</button></p>
+            <p>Student at Jain University and an enthusiastic learner.</p>
+            <div class="w3-xlarge w3-section w3-center">
+              <a href="https://www.instagram.com/shruthi__kumar/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+              <a href="mailto:srutisk24@gmail.com?cc=rans@gmail.com,&subject=Mail from RANS Website&body=Hello Shruthi," target="_blank"><i class="fa fa-envelope w3-hover-opacity"></i></a>
+              <a href="https://twitter.com/ShruthiSatishK1" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+              <a href="https://www.linkedin.com/in/shruthi-satish-kumar-78841a208/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+            </div>
           </div>
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="img/aarti.jpeg" alt="aarti" style="width:100%">
+          <img src="img/aarti.jpg" alt="aarti" style="width:100%">
           <div class="w3-container">
-            <h3>Aarti</h3>
+            <h3>Aarti.B</h3>
             <p class="w3-opacity">TEAM MEMBER</p>
-            <p>About Aarti.</p>
-            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> More Info</button></p>
+            <p>Student at Jain University and an Adaptable person.</p>
+            <div class="w3-xlarge w3-section w3-center">
+              <a href="https://www.instagram.com/aarti_ingli/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+              <a href="mailto:aartishrikutty@gmail.com?cc=rans@gmail.com,&subject=Mail from RANS Website&body=Hello Aarti," target="_blank"><i class="fa fa-envelope w3-hover-opacity"></i></a>
+              <a href="https://twitter.com/AartiBaskaran" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+              <a href="https://www.linkedin.com/in/aarti-shri-696803194/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -185,10 +342,55 @@
   </div>
 
 
+  <!-- Work Section -->
+  <div class="w3-container w3-dark-grey" style="padding:95px 16px" id="work">
+    <h3 class="w3-center"><b>OUR WORK</b></h3>
+    <p class="w3-center w3-large"><b>What we've done for people</b></p>
+
+    <div class="w3-row-padding" style="margin-top:64px">
+      <div class="w3-col l3 m6">
+        <img src="img/work/logo.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="RANS Logo">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="img/work/info.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Our RANS provides the required information to students of Jain University">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="img/work/speech recognition.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Convert Speech to text and vice versa">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="img/work/image_recognition.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Image Recognition">
+      </div>
+    </div>
+    <div class="w3-row-padding w3-section">
+      <div class="w3-col l3 m6">
+        <img src="img/work/events-calendar.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Calendar of Events exclusively for Jain University">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-blue" onclick="this.style.display='none'">
+    <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+
   <!-- Contact Section -->
   <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-    <h3 class="w3-center">CONTACT</h3>
-    <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+    <h3 class="w3-center"><b>CONTACT</b></h3>
+    <p class="w3-center w3-large"><b>Lets get in touch. Send us a message:</b></p>
     <div style="margin-top:48px">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Banglore, India</p>
       <p><i class="fa fa-building fa-fw w3-xxlarge w3-margin-right"></i> Jain (Deemed-to-be) University</p>
@@ -207,8 +409,11 @@
         </p>
       </form>
       <div id="status"></div>
-      <!-- Image of location/map --> <!--Should create a map.jpg pic-->
-      <img src="img/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+      <!-- Image of location/map -->
+      <map name="imagemap">
+        <area shape="circle" coords="600,520,60" href="https://www.google.com/maps/place/Faculty+of+Engineering+and+Technology+-+(FET+JU)/@12.6409923,77.4412916,1530a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x0:0x424bdd92f039db75!8m2!3d12.6421763!4d77.4399964" alt="Jain University Global Campus" target="_blank">
+      </map>
+      <img src="img/map.png" class="w3-image w3-greyscale-min" style="width:100%;margin-top:48px" usemap="#imagemap">
     </div>
   </div>
 
@@ -229,6 +434,24 @@
     <p>Powered by <a href="#home" title="rans" target="_blank" class="w3-hover-text-green">RANS</a></p>
   </footer>
 
+
+<!--login page-->
+<!-- Modal container it includes the overlay -->
+<div id="myModal"class="Modal is-hidden is-visuallyHidden">
+  <!-- Modal content -->
+  <div class="Modal-content">
+    <span id="closeModal" class="Close">&times;</span>
+    <p class="bot" align="center">Bot</p>
+    <form class="form1" action="process.php" method="POST">
+      <input class="un " name="user" type="text" align="center" placeholder="USN">
+      <input class="pass" name="pass" type="password" align="center" placeholder="DDMMYYYY">
+      <input class="btn-login" name="submit" type="submit" value="login" align="center">
+      <p id="closeModal" class="trouble" align="center"><a href=#contact>Trouble?</a></p>
+    </form>
+  </div>
+</div>
+
+
   <script>
     // Toggle between showing and hiding the sidebar when clicking the menu icon
     var mySidebar = document.getElementById("mySidebar");
@@ -240,12 +463,65 @@
         mySidebar.style.display = 'block';
       }
     }
-
-
     // Close the sidebar with the close button
     function _close() {
         mySidebar.style.display = "none";
     }
+
+
+    //loginpage popup and blur the background
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the main container and the body
+    var body = document.getElementsByTagName('body');
+    var container = document.getElementById('myContainer');
+
+    // Get the open button
+    var btnOpen = document.getElementById("myBtn");
+
+    // Get the close button
+    var btnClose = document.getElementById("closeModal");
+
+    // Open the modal
+    btnOpen.onclick = function() {
+        modal.className = "Modal is-visuallyHidden";
+        setTimeout(function() {
+          container.className = "MainContainer is-blurred";
+          modal.className = "Modal";
+        }, 100);
+        container.parentElement.className = "ModalOpen";
+    }
+
+    // Close the modal
+    btnClose.onclick = function() {
+        modal.className = "Modal is-hidden is-visuallyHidden";
+        body.className = "";
+        container.className = "MainContainer";
+        container.parentElement.className = "";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.className = "Modal is-hidden";
+            body.className = "";
+            container.className = "MainContainer";
+            container.parentElement.className = "";
+        }
+    }
+
+
+    //Work Section Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+
+    //Contack status
     window.addEventListener("DOMContentLoaded", function () {
       // get the form elements defined in your form HTML above
       var form = document.getElementById("my-form");
@@ -287,5 +563,5 @@
 
 
   </script>
-  </body>
+</body>
 </html>
