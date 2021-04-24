@@ -1,8 +1,12 @@
+<?php
+  include "check/check.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>BOT</title>
+    <title>HUMANIZER BOT</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -59,145 +63,6 @@
       }
     }
 
-
-/*login page style start*/
-    .body {
-    background-color: #F3EBF6;
-    font-family: 'Ubuntu', sans-serif;
-    }
-
-    .bot {
-    padding-top: 40px;
-    color: #00BFFF;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
-    font-size: 23px;
-    }
-    .un {
-    width: 76%;
-    color: #00BFFF;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-bottom: 50px;
-    margin-left: 46px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-    }
-    form.form1 {
-    padding-top: 30px;
-    }
-    .pass {
-    width: 76%;
-    color: #00BFFF;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-bottom: 50px;
-    margin-left: 46px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-    }
-    .un:focus, .pass:focus {
-    border: 2px solid rgba(0, 0, 0, 0.18) !important;
-    }
-    .btn-login {
-    cursor: pointer;
-    border-radius: 5em;
-    color: #fff;
-    background: linear-gradient(to right, #1E90FF, #00BFFF);
-    border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    margin-left: 35%;
-    font-size: 14px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-    }
-    .trouble {
-    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #00BFFF;
-    padding-top: 20px;
-    text-decoration: none;
-    }
-    @media (max-width: 600px) {
-    .main {
-        border-radius: 0px;
-      }
-    }
-
-    /* popup style*/
-    .Modal {
-      display: block;
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 9999;
-      width: 100%;
-      height: 100%;
-      padding-top: 50px;
-      background-color: black;
-      background-color: rgba(0, 0, 0, 0.4);
-      -webkit-transition: 0.5s;
-      overflow: auto;
-      transition: all 0.3s linear;
-    }
-    .Modal-content {
-      background-color: #000000;
-      margin: 7em auto;
-      padding: 10px;
-      border-radius: 4px;
-      width: 350px;
-      height: 400px;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 0.75rem;
-      border-radius: 1.5em;
-      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-    }
-    .ModalOpen { overflow: hidden; }
-    .is-hidden { display: none; }
-    .is-visuallyHidden { opacity: 0; }
-
-    /*style and position of the close button*/
-    .Close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 16px;
-    }
-    .Close:hover, .Close:focus {
-      color: #00BFFF;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    /*blur the main content using CSS3 filters*/
-    .is-blurred {
-      filter: blur(2px);
-      -webkit-filter: blur(2px);
-    }
-
-
-/*login page style end*/
-
   </style>
 
 
@@ -207,6 +72,9 @@
   <div class="w3-top">
     <div class="w3-bar w3-blue w3-card" id="myNavbar">
       <a href="#home" class="w3-bar-item w3-button w3-wide">RANS</a>
+
+      <a href="bot.html" class="w3-bar-item w3-button w3-left">BOT</a>
+      <a href="logout.php" class="w3-bar-item w3-button w3-right"><i class="fa fa-lock"></i> LOGOUT</a>
 
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small">
@@ -220,7 +88,7 @@
       <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="_open()">
       <i class="fa fa-bars"></i>
       </a>
-      <a class="w3-bar-item w3-button w3-right" id="myBtn"><i class="fa fa-lock"></i> LOGIN</a>
+
     </div>
   </div>
 
@@ -238,7 +106,7 @@
   <!-- Header with full-height image -->
   <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-black" style="padding:48px">
-      <span class="w3-xxxlarge w3-hide-small w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" style="border-radius:20px" >Welcome To Humanizer Bot</span><br>
+      <span class="w3-jumbo w3-hide-small w3-whit w3-padding-large w3-large w3-margin-top w3-opacityy w3-hover-opacity-off" style="border-radius:20px" >Welcome To <br> Humanizer Bot</span><br>
       <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome To Humanizer Bot</span><br><br>
       <span class="w3-large">Get info from anywhere anytime with one click.</span>
       <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more about us</a></p>
@@ -376,7 +244,6 @@
       </div>
     </div>
   </div>
-</div>
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-blue" onclick="this.style.display='none'">
     <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
@@ -435,22 +302,6 @@
   </footer>
 
 
-<!--login page-->
-<!-- Modal container it includes the overlay -->
-<div id="myModal"class="Modal is-hidden is-visuallyHidden">
-  <!-- Modal content -->
-  <div class="Modal-content">
-    <span id="closeModal" class="Close">&times;</span>
-    <p class="bot" align="center">Bot</p>
-    <form class="form1" action="process.php" method="POST">
-      <input class="un " name="user" type="text" align="center" placeholder="USN">
-      <input class="pass" name="pass" type="password" align="center" placeholder="DDMMYYYY">
-      <input class="btn-login" name="submit" type="submit" value="login" align="center">
-      <p id="closeModal" class="trouble" align="center"><a href=#contact>Trouble?</a></p>
-    </form>
-  </div>
-</div>
-
 
   <script>
     // Toggle between showing and hiding the sidebar when clicking the menu icon
@@ -466,49 +317,6 @@
     // Close the sidebar with the close button
     function _close() {
         mySidebar.style.display = "none";
-    }
-
-
-    //loginpage popup and blur the background
-    // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // Get the main container and the body
-    var body = document.getElementsByTagName('body');
-    var container = document.getElementById('myContainer');
-
-    // Get the open button
-    var btnOpen = document.getElementById("myBtn");
-
-    // Get the close button
-    var btnClose = document.getElementById("closeModal");
-
-    // Open the modal
-    btnOpen.onclick = function() {
-        modal.className = "Modal is-visuallyHidden";
-        setTimeout(function() {
-          container.className = "MainContainer is-blurred";
-          modal.className = "Modal";
-        }, 100);
-        container.parentElement.className = "ModalOpen";
-    }
-
-    // Close the modal
-    btnClose.onclick = function() {
-        modal.className = "Modal is-hidden is-visuallyHidden";
-        body.className = "";
-        container.className = "MainContainer";
-        container.parentElement.className = "";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.className = "Modal is-hidden";
-            body.className = "";
-            container.className = "MainContainer";
-            container.parentElement.className = "";
-        }
     }
 
 
