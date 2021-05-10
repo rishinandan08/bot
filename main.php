@@ -1,5 +1,5 @@
 <?php
-  include "check/check.php"
+  include "check/check.php";
 ?>
 
 <!DOCTYPE html>
@@ -73,8 +73,8 @@
     <div class="w3-bar w3-blue w3-card" id="myNavbar">
       <a href="#home" class="w3-bar-item w3-button w3-wide">RANS</a>
 
-      <a href="bot.html" class="w3-bar-item w3-button w3-left">BOT</a>
-      <a href="logout.php" class="w3-bar-item w3-button w3-right"><i class="fa fa-lock"></i> LOGOUT</a>
+      <a href="bot.php" class="w3-bar-item w3-button w3-left">BOT</a>
+      <a href="logout.php" class="w3-bar-item w3-button w3-right w3-black"><i class="fa fa-lock"></i> LOGOUT</a>
 
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small">
@@ -106,7 +106,7 @@
   <!-- Header with full-height image -->
   <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-black" style="padding:48px">
-      <span class="w3-jumbo w3-hide-small w3-whit w3-padding-large w3-large w3-margin-top w3-opacityy w3-hover-opacity-off" style="border-radius:20px" >Welcome To <br> Humanizer Bot</span><br>
+      <span class="w3-jumbo w3-hide-small w3-padding-large w3-large w3-margin-top w3-opacityy w3-hover-opacity-off" style="border-radius:20px" >Welcome To <br> Humanizer Bot</span><br>
       <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome To Humanizer Bot</span><br><br>
       <span class="w3-large">Get info from anywhere anytime with one click.</span>
       <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more about us</a></p>
@@ -284,24 +284,9 @@
     </div>
   </div>
 
-
-  <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-64">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <!--
-    <div class="w3-xlarge w3-section">
-      <a href="https://www.google.com"><p class="fa fa-facebook-official w3-hover-opacity"></p></a>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    -->
-    <p>Powered by <a href="#home" title="rans" target="_blank" class="w3-hover-text-green">RANS</a></p>
-  </footer>
-
-
+<?php
+  include "footer.php";
+ ?>
 
   <script>
     // Toggle between showing and hiding the sidebar when clicking the menu icon
