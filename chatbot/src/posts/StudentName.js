@@ -20,6 +20,7 @@ function SName() {
           } else if (val.Name.toLowerCase().includes(searchTerm.toLowerCase())) {
             return val
           }
+          return null
         }).map( (val, key )=>{
           return (
           <div className="student" key={key}>
