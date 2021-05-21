@@ -73,7 +73,7 @@
     <div class="w3-bar w3-blue w3-card" id="myNavbar">
       <a href="#home" class="w3-bar-item w3-button w3-wide">RANS</a>
 
-      <a href="../chatbot/public/" class="w3-bar-item w3-button w3-left">BOT</a>
+      <a href="http://localhost/bot/chatbot/build/index.html" class="w3-bar-item w3-button w3-left">BOT</a>
       <a href="logout.php" class="w3-bar-item w3-button w3-right w3-black"><i class="fa fa-lock"></i> LOGOUT</a>
 
       <!-- Right-sided navbar links -->

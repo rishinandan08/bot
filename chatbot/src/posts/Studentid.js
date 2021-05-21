@@ -6,7 +6,7 @@ import '../App.css'
 function Sid() {
   const [searchTerm, setSearchTerm] = useState('');
     return (
-      <div className="PostList">
+      <div>
       <input
         type="text"
         placeholder="Search by USN"
@@ -14,13 +14,7 @@ function Sid() {
           setSearchTerm(event.target.value)
         }}
       />
-        {StudentData.filter((val) => {
-          if (searchTerm === ""){
-            return null
-          } else if (val.USN.toLowerCase().includes(searchTerm.toLowerCase())) {
-            return val
-          }
-        }).map( (val, key )=>{
+        {StudentData.filter((item) => item.USN.toLowerCase()===searchTerm.toLowerCase()).map( (val, key )=>{
           return (
           <div className="student" key={key}>
           <h1>Student Information</h1>

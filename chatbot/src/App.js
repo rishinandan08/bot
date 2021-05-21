@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ChatBot from 'react-simple-chatbot';
-import './App.css';
 import { ThemeProvider } from 'styled-components';
-import Sname from './posts/StudentName'
-import Sid from './posts/Studentid'
+import DBPedia from './posts/restart.js'
+import Sname from './posts/StudentName';
+import Sid from './posts/Studentid';
+import Bot from './data/bot_img.jpg';
+import User from './data/me.jpeg';
 
 // all available props
 const theme = {
@@ -20,130 +22,160 @@ const theme = {
 
 // all available config props
 const config ={
-  width: "400px",
+  width: "450px",
   height: "500px",
   floating: true,
 };
 
-const steps = [
-  {
-    id: '1',
-    message: 'Hi! I am RANS.',
-    trigger: '2',
-  },
-  {
-    id: '2',
-    message: 'What is your name?',
-    trigger: '3',
-  },
-  {
-    id: '3',
-    user: true,
-    trigger: '4',
-  },
-  {
-    id: '4',
-    message: 'Hi {previousValue}, nice to meet you!',
-    trigger: '5',
-  },
-  {
-    id: '5',
-    message: 'How may i help you from the below course of actions?',
-    trigger: 'choose',
-  },
-  {
-    id: 'choose',
-    options: [
-      { value: 1, label: 'Student Information', trigger: 'student' },
-      { value: 2, label: 'professor Information', trigger: 'professor' },
-      { value: 3, label: 'Subject Information', trigger: 'Subject' },
-      { value: 4, label: 'Class Notes', trigger: 'notes'},
-      { value: 5, label: 'Checking availability of notes', trigger: 'test' },
-      { value: 6, label: 'Conversation', trigger: 'test'},
-    ],
-  },
-  {
-    id: 'student',
-    options: [
-      { value: 1, label: 'USN of Student', trigger: 'Student_id'},
-      { value: 2, label: 'Name of Student', trigger: 'Student_name'},
-    ],
-  },
-  {
-    id: 'Student_id',
-    component: <Sid />,
-    trigger: 'continue',
-  },
-  {
-    id: 'Student_name',
-    component: <Sname />,
-    asMessage: '',
-    trigger: 'continue',
-  },
-  {
-    id: 'professor',
-    message: 'Enter name of the professor',
-    user: true,
-    trigger: 'test',
-  },
-  {
-    id: 'Subject',
-    message: 'Enter the id of the Subject',
-    user: true,
-    trigger: 'test',
-  },
-  {
-    id: 'notes',
-    component: <GoToPage />,
-    trigger: 'continue',
-  },
-  {
-    id: 'test',
-    message: 'Retrieving information',
-    trigger: 'continue',
-  },
-  {
-    id: 'continue',
-    message: 'Would you like to receive any other information?',
-    trigger: 'option',
-  },
-  {
-    id: 'option',
-    options: [
-      { value: 1, label: 'Yes', trigger: 'choose'},
-      { value: 2, label: 'No', trigger: 'no'},
-    ],
-  },
-  {
-    id: 'no',
-    message: 'Thank you! Hope I was helpfull to you.',
-    end: true,
-  },
-];
-
-function GoToPage(){
-  window.open('http://localhost/bot/notes/homepage.php',"_blank");
-  return <div>
-  <p>Redirecting to the page...</p>
-  <p>Redirected.</p>
-  </div>
-}
+const steps=[
+      {
+        id: '1',
+        message: "Hi! I'm RANS.",
+        trigger: '2',
+      },
+      {
+        id: '2',
+        message: 'What is your name?',
+        trigger: '3',
+      },
+      {
+        id: '3',
+        user: true,
+        trigger: '4',
+      },
+      {
+        id: '4',
+        message: 'Hi {previousValue}, nice to meet you!',
+        trigger: '5',
+      },
+      {
+        id: '5',
+        message: 'How may i help you from the below course of actions?',
+        trigger: 'choose',
+      },
+      {
+        id: 'choose',
+        options: [
+          { value: 1, label: 'Student Information', trigger: 'student' },
+          { value: 2, label: 'professor Information', trigger: 'professor' },
+          { value: 3, label: 'Subject Information', trigger: 'Subject' },
+          { value: 4, label: 'Class Notes', trigger: 'notes'},
+          { value: 5, label: 'Checking availability of notes', trigger: 'test' },
+          { value: 6, label: 'Conversation', trigger: 'test'},
+        ],
+      },
+      {
+        id: 'student',
+        options: [
+          { value: 1, label: 'USN of Student', trigger: 'Student_id'},
+          { value: 2, label: 'Name of Student', trigger: 'Student_name'},
+        ],
+      },
+      {
+        id: 'Student_id',
+        component: <Sid />,
+        asMessage: true,
+        trigger: 'continue',
+      },
+      {
+        id: 'Student_name',
+        component: <Sname />,
+        asMessage: true,
+        trigger: 'continue',
+      },
+      {
+        id: 'professor',
+        message: 'Enter name of the professor',
+        trigger: 'test',
+      },
+      {
+        id: 'Subject',
+        message: 'Enter the id of the Subject',
+        trigger: 'test',
+      },
+      {
+        id: 'notes',
+        component: <a href="http://localhost/bot/notes/homepage.php" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        asMessage: true,
+        trigger: 'continue',
+      },
+      {
+        id: 'test',
+        message: 'Retrieving information',
+        trigger: 'continue',
+      },
+      {
+        id: 'continue',
+        message: 'Would you like to receive any other information?',
+        trigger: 'option',
+      },
+      {
+        id: 'option',
+        options: [
+          { value: 1, label: 'Yes', trigger: 'choose'},
+          { value: 2, label: 'No', trigger: 'no'},
+        ],
+      },
+      {
+        id: 'no',
+        message: 'Thank you! Hope I was helpfull to you.',
+        trigger: 'restart',
+      },
+      {
+        id: 'restart',
+        component: <DBPedia />,
+        waitAction: true,
+        trigger: 'again',
+      },
+      {
+        id: 'again',
+        message:'Hello again',
+        trigger:'5',
+      },
+    ];
 
 class chatbot extends Component {
+  logout = ()=>{
+    //console.log("cookie",document.cookie);
+    document.cookie = 'PHPSESSID'+'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    window.location.reload();
+  }
+  handleClear = () => {
+  this.setState({ clear: true }, () => {
+    this.setState({ clear: false });
+  });
+}
   render () {
     return (
-      <ThemeProvider theme={theme}>
-        <ChatBot steps={steps}
-        headerTitle="RANS"
-        recognitionEnable={true}
-        //speechSynthesis={{ enable: true, lang: 'en' }}
-        botDelay="2000"
-        {...config}
-         />;
-      </ThemeProvider>
+      <div>
+        {document.cookie.indexOf('PHPSESSID') === 0?
+        <>
+
+            <div class="w3-top">
+              <div class="w3-bar w3-blue w3-card" id="myNavbar">
+                <a href="http://localhost/bot/main.php" class="w3-bar-item w3-button w3-wide">RANS</a>
+                <a href="http://localhost/bot/chatbot/build/index.html" class="w3-bar-item w3-button w3-left">BOT</a>
+                <button onClick={this.logout} class="w3-bar-item w3-right w3-black w3-button">Logout</button>
+              </div>
+            </div>
+
+            <ThemeProvider theme={theme}>
+            <ChatBot steps={steps}
+            headerTitle="RANS"
+            recognitionEnable={true}
+            //speechSynthesis={{ enable: true, lang: 'en' }}
+            botDelay="2000"
+            {...config}
+            botAvatar={Bot}
+            userAvatar={User}
+            />;
+            </ThemeProvider>
+
+      </>
+      : window.location.replace('http://localhost/') }
+      </div>
     )
   }
 }
-
 
 export default chatbot;
