@@ -61,7 +61,7 @@ const steps=[
           { value: 3, label: 'Subject Information', trigger: 'Subject' },
           { value: 4, label: 'Class Notes', trigger: 'notes'},
           { value: 5, label: 'Checking availability of notes', trigger: 'test' },
-          { value: 6, label: 'Conversation', trigger: 'test'},
+          { value: 6, label: 'Conversation', trigger: 'convert'},
         ],
       },
       {
@@ -96,6 +96,25 @@ const steps=[
       {
         id: 'notes',
         component: <a href="http://localhost/bot/notes/homepage.php" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        asMessage: true,
+        trigger: 'continue',
+      },
+      {
+        id: 'convert',
+        options: [
+          { value:1, label:'Speech to Text', trigger:'stt' },
+          { value:2, label:'Text to Speech', trigger:'tts' }
+        ],
+      },
+      {
+        id: 'stt',
+        component: <a href="http://localhost/bot/converter.php" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        asMessage: true,
+        trigger: 'continue',
+      },
+      {
+        id: 'tts',
+        component: <a href="www.google.com" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
@@ -137,8 +156,9 @@ const steps=[
 class chatbot extends Component {
   logout = ()=>{
     //console.log("cookie",document.cookie);
-    document.cookie = 'PHPSESSID'+'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = "PHPSESSID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     window.location.reload();
+    document.cookie.remove('PHPSESSID');
   }
   handleClear = () => {
   this.setState({ clear: true }, () => {

@@ -74,18 +74,18 @@
       <a href="#home" class="w3-bar-item w3-button w3-wide">RANS</a>
 
       <a href="http://localhost/bot/chatbot/build/index.html" class="w3-bar-item w3-button w3-left">BOT</a>
-      <a href="logout.php" class="w3-bar-item w3-button w3-right w3-black"><i class="fa fa-lock"></i> LOGOUT</a>
 
       <!-- Right-sided navbar links -->
-      <div class="w3-right w3-hide-small">
+      <div class="w3-right w3-hide-small w3-hide-medium">
         <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
         <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
         <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
         <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+        <a href="logout.php" class="w3-bar-item w3-button w3-right w3-black"><i class="fa fa-lock"></i> LOGOUT</a>
       </div>
 
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="_open()">
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large " onclick="_open()">
       <i class="fa fa-bars"></i>
       </a>
 
@@ -94,12 +94,13 @@
 
 
   <!-- Sidebar on small screens when clicking the menu icon -->
-  <nav class="w3-sidebar w3-bar-block w3-blue w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <nav class="w3-sidebar w3-bar-block w3-blue w3-card w3-animate-left w3-hide-large" style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="_close()" class="w3-bar-item w3-button w3-large w3-padding-16 w3-black">Close ×</a>
     <a href="#about" onclick="_close()" class="w3-bar-item w3-button">ABOUT</a>
     <a href="#team" onclick="_close()" class="w3-bar-item w3-button">TEAM</a>
     <a href="#work" onclick="_close()" class="w3-bar-item w3-button">WORK</a>
     <a href="#contact" onclick="_close()" class="w3-bar-item w3-button">CONTACT</a>
+    <a href="logout.php" class="w3-bar-item w3-button w3-right w3-black"><i class="fa fa-lock"></i> LOGOUT</a>
   </nav>
 
 
@@ -266,7 +267,7 @@
       <!-- change the action form-->
       <form action="https://formspree.io/f/moqyqrvp" target="_blank" method="POST" id="my-form">
         <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email"></p>
         <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
         <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
         <p>
