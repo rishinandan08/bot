@@ -17,7 +17,7 @@
         <i class="fa fa-linkedin w3-hover-opacity"></i>
       </div>
       -->
-      <p>Powered by <a href="#home" title="rans" class="w3-hover-text-green">RANS</a></p>
+      <p>Powered by <a href="#home" title="rans" class="w3-hover-text-blue">RANS</a></p>
     </footer>
   </body>
 </html>
