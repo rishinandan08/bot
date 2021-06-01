@@ -1,29 +1,77 @@
 <?php
-  include "check/config.php";
-  include "check/check1.php";
+  include "check/check.php";
 
-  if(isset($_POST['submit'])){
+  // if(isset($_POST['submit'])){
+  //
+  //   $User = mysqli_real_escape_string($conn, $_POST['user']);
+  //   $pass = $_POST['pass'];
+  //
+  //   $sql= "SELECT * from login where User='$User' AND pass='$pass'";
+  //   $result = mysqli_query($conn, $sql) or die("failed to query database");
+  //
+  //   if(mysqli_num_rows($result) > 0){
+  //     while($row = mysqli_fetch_assoc($result)){
+  //           session_start();
+  //           $_SESSION["User"] = $row['User'];
+  //           $_SESSION["user_id"] = $row['ID'];
+  //
+  //           header("Location: main.php");
+  //     }
+  //   }else{
+  //     echo '<script language="javascript">';
+  //     echo 'alert("Invalid Username or Password")';
+  //     echo '</script>';
+  //        }
+  // }
 
-    $User = mysqli_real_escape_string($conn, $_POST['user']);
-    $pass = $_POST['pass'];
+    $host="remotemysql.com";
+    $username="AQcSrmYT6v";
+    $password="royIHp4kxd";
+    $database="AQcSrmYT6v";
+    $message="";
+  try{
+    $connect = new PDO("mysql:host=$host; dbname=$database", $username,$password);
 
-    $sql= "SELECT * from login where User='$User' AND pass='$pass'";
-    $result = mysqli_query($conn, $sql) or die("failed to query database");
-
-    if(mysqli_num_rows($result) > 0){
-      while($row = mysqli_fetch_assoc($result)){
-            session_start();
-            $_SESSION["User"] = $row['User'];
-            $_SESSION["user_id"] = $row['ID'];
-
-            header("Location: main.php");
+    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    if(isset($_POST["submit"]))
+    {
+      if(empty($_POST["username"]) || empty($_POST["password"]))
+      {
+        $message='<label>ALL fields are required</label>';
       }
-    }else{
-      echo '<script language="javascript">';
-      echo 'alert("Invalid Username or Password")';
-      echo '</script>';
-         }
+      else
+      {
+        $query="SELECT * FROM login WHERE username = :username AND password = :password";
+        $statement = $connect->prepare($query);
+        $statement->execute(
+
+          array(
+
+            'username' => $_POST["username"],
+            'password' => $_POST["password"]
+
+          )
+        );
+
+        $count = $statement->rowCount();
+        if($count > 0)
+        {
+          session_start();
+          $_SESSION["username"] = $_POST["username"];
+          header("location:main.php");
+        }
+        else
+        {
+          $message = '<label>Incorrect</label>';
+        }
+      }
+    }
   }
+  catch(PDOException $error)
+  {
+    $message = $error->getMessage();
+  }
+
  ?>
 
 
@@ -273,8 +321,12 @@
         <span id="closeModal" class="Close">&times;</span>
         <p class="bot" align="center">Bot</p>
         <form class="form1" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-          <input class="un " name="user" type="text" align="center" placeholder="USN" required>
-          <input id="visable" class="pass" name="pass" type="password" align="center" placeholder="DDMMYYYY" required>
+          <?php if(isset($message)){echo '<label>'.$message.'</label>';}?>
+          <!-- <input class="un " name="user" type="text" align="center" placeholder="USN" required>
+          <input id="visable" class="pass" name="pass" type="password" align="center" placeholder="DDMMYYYY" required> -->
+          <input class="un " name="username" type="text" align="center" placeholder="USN" required>
+          <input id="visable" class="pass" name="password" type="password" align="center" placeholder="DDMMYYYY" required>
+
           <span class="eye" onclick="vis()">
             <i id="hide1" class="fa fa-eye"></i>
             <i id="hide2" class="fa fa-eye-slash"></i>

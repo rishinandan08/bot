@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import DBPedia from './posts/restart.js'
 import Sname from './posts/StudentName';
 import Sid from './posts/Studentid';
+import Pname from './posts/professor';
 import Bot from './data/bot_img.jpg';
 import User from './data/me.jpeg';
 
@@ -59,9 +60,8 @@ const steps=[
           { value: 1, label: 'Student Information', trigger: 'student' },
           { value: 2, label: 'professor Information', trigger: 'professor' },
           { value: 3, label: 'Subject Information', trigger: 'Subject' },
-          { value: 4, label: 'Class Notes', trigger: 'notes'},
-          { value: 5, label: 'Checking availability of notes', trigger: 'test' },
-          { value: 6, label: 'Conversation', trigger: 'convert'},
+          { value: 4, label: 'Study Materials', trigger: 'notes'},
+          { value: 5, label: 'Conversation', trigger: 'convert'},
         ],
       },
       {
@@ -85,8 +85,9 @@ const steps=[
       },
       {
         id: 'professor',
-        message: 'Enter name of the professor',
-        trigger: 'test',
+        component: <Pname />,
+        asMessage: true,
+        trigger: 'continue',
       },
       {
         id: 'Subject',
@@ -102,7 +103,7 @@ const steps=[
       {
         id: 'convert',
         options: [
-          { value:1, label:'Speech to Text', trigger:'stt' },
+          { value:1, label:'Take Note',alt:'Using Speech to text Conversation' , trigger:'stt' },
           { value:2, label:'Text to Speech', trigger:'tts' }
         ],
       },
@@ -114,7 +115,7 @@ const steps=[
       },
       {
         id: 'tts',
-        component: <a href="www.google.com" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="http://localhost/bot/texttospeech.html" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },

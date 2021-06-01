@@ -1,5 +1,5 @@
 <?php
-  include "check/check.php";
+  include "check/check1.php";
 ?>
 
 <!DOCTYPE html>
@@ -110,6 +110,7 @@
       <span class="w3-jumbo w3-hide-small w3-padding-large w3-large w3-margin-top w3-opacityy w3-hover-opacity-off" style="border-radius:20px" >Welcome To <br> Humanizer Bot</span><br>
       <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome To Humanizer Bot</span><br><br>
       <span class="w3-large">Get info from anywhere anytime with one click.</span>
+      <?php echo '<p>hello '.$_SESSION["username"] .'</p>' ?>
       <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more about us</a></p>
     </div>
   </header>
