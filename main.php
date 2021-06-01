@@ -73,7 +73,7 @@
     <div class="w3-bar w3-blue w3-card" id="myNavbar">
       <a href="#home" class="w3-bar-item w3-button w3-wide">RANS</a>
 
-      <a href="chatbot/build/index.html" class="w3-bar-item w3-button w3-left">BOT</a>
+      <a href="https://chatbot-pearl.vercel.app/" class="w3-bar-item w3-button w3-left">BOT</a>
 
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small w3-hide-medium">
@@ -107,10 +107,10 @@
   <!-- Header with full-height image -->
   <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-black" style="padding:48px">
+      <?php echo '<p>hello '.$_SESSION["username"] .'</p>' ?>
       <span class="w3-jumbo w3-hide-small w3-padding-large w3-large w3-margin-top w3-opacityy w3-hover-opacity-off" style="border-radius:20px" >Welcome To <br> Humanizer Bot</span><br>
       <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome To Humanizer Bot</span><br><br>
       <span class="w3-large">Get info from anywhere anytime with one click.</span>
-      <?php echo '<p>hello '.$_SESSION["username"] .'</p>' ?>
       <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more about us</a></p>
     </div>
   </header>
