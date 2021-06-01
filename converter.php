@@ -1,5 +1,5 @@
 <?php
-  include "check/check.php";
+  include "check/check1.php";
 ?>
 
 <!DOCTYPE html>
@@ -111,7 +111,7 @@
   <!-- Sidebar on small screens when clicking the menu icon -->
   <nav class="w3-sidebar w3-bar-block w3-blue w3-card w3-animate-left w3-hide-large" style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="_close()" class="w3-bar-item w3-button w3-large w3-padding-16 w3-black">Close ×</a>
-    <a href="bot.php" class="w3-bar-item w3-button w3-left">BOT</a>
+    <a href="./chatbot/build/index.html" class="w3-bar-item w3-button w3-left">BOT</a>
     <a href="#show" class="w3-bar-item w3-button w3-wide">NOTES</a>
     <a href="logout.php" class="w3-bar-item w3-button w3-right w3-black"><i class="fa fa-lock"></i> LOGOUT</a>
   </nav>
