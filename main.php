@@ -73,7 +73,7 @@
     <div class="w3-bar w3-blue w3-card" id="myNavbar">
       <a href="#home" class="w3-bar-item w3-button w3-wide">RANS</a>
 
-      <a href="https://chatbot-pearl.vercel.app" class="w3-bar-item w3-button w3-left">BOT</a>
+      <a href="chatbot/build/index.html" class="w3-bar-item w3-button w3-left">BOT</a>
 
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small w3-hide-medium">
