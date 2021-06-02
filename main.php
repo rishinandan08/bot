@@ -73,7 +73,7 @@
     <div class="w3-bar w3-blue w3-card" id="myNavbar">
       <a href="#home" class="w3-bar-item w3-button w3-wide">RANS</a>
 
-      <a href="https://chatbot-pearl.vercel.app/" class="w3-bar-item w3-button w3-left">BOT</a>
+      <a href="chatbot/build/" class="w3-bar-item w3-button w3-left">BOT</a>
 
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small w3-hide-medium">
@@ -144,7 +144,7 @@
     <h3 class="w3-center"><b>THE TEAM</b></h3>
     <p class="w3-center w3-large"><b>The supervisors of this website</b></p>
     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m12 w3-margin-bottom">
         <div class="w3-card">
           <img src="img/rishi.jpg" alt="rishi" style="width:100%">
           <div class="w3-container">
@@ -160,7 +160,7 @@
           </div>
         </div>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m12 w3-margin-bottom">
         <div class="w3-card">
           <img src="img/nithusha.jpeg" alt="nithusha" style="width:100%">
           <div class="w3-container">
@@ -176,7 +176,7 @@
           </div>
         </div>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m12 w3-margin-bottom">
         <div class="w3-card">
           <img src="img/shruthi1.jpeg" alt="shruthi" style="width:100%">
           <div class="w3-container">
@@ -192,7 +192,7 @@
           </div>
         </div>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l3 m12 w3-margin-bottom">
         <div class="w3-card">
           <img src="img/aarti.jpg" alt="aarti" style="width:100%">
           <div class="w3-container">

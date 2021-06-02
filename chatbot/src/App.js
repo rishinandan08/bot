@@ -96,7 +96,7 @@ const steps=[
       },
       {
         id: 'notes',
-        component: <a href="http://localhost/bot/notes/homepage.php" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="https://humanizerbot.herokuapp.com/notes/homepage.php" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
@@ -109,13 +109,13 @@ const steps=[
       },
       {
         id: 'stt',
-        component: <a href="http://localhost/bot/converter.php" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="https://humanizerbot.herokuapp.com/converter.php" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
       {
         id: 'tts',
-        component: <a href="http://localhost/bot/texttospeech.html" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="https://humanizerbot.herokuapp.com/ttos.html" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
@@ -157,9 +157,9 @@ const steps=[
 class chatbot extends Component {
   logout = ()=>{
     //console.log("cookie",document.cookie);
-    document.cookie = "PHPSESSID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "1P_JAR=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     window.location.reload();
-    document.cookie.remove('PHPSESSID');
+    document.cookie.remove('1P_JAR');
   }
   handleClear = () => {
   this.setState({ clear: true }, () => {
@@ -169,14 +169,14 @@ class chatbot extends Component {
   render () {
     return (
       <div>
-        {document.cookie.indexOf('PHPSESSID') === 0?
+        {document.cookie.indexOf('1P_JAR') === 0?
         <>
 
             <div class="w3-top">
               <div class="w3-bar w3-blue w3-card" id="myNavbar">
-                <a href="http://localhost/bot/main.php" class="w3-bar-item w3-button w3-wide">RANS</a>
-                <a href="http://localhost/bot/chatbot/build/index.html" class="w3-bar-item w3-button w3-left">BOT</a>
-                <button onClick={this.logout} class="w3-bar-item w3-right w3-black w3-button">Logout</button>
+                <a href="https://humanizerbot.herokuapp.com/" class="w3-bar-item w3-button w3-wide">RANS</a>
+                <a href="/" class="w3-bar-item w3-button w3-left">BOT</a>
+                <button onClick={this.logout} class="w3-bar-item w3-right w3-black w3-button"><i class="fa fa-lock"></i>Logout</button>
               </div>
             </div>
 
@@ -193,7 +193,7 @@ class chatbot extends Component {
             </ThemeProvider>
 
       </>
-      : window.location.replace('http://localhost/') }
+      : window.location.replace('https://humanizerbot.herokuapp.com/') }
       </div>
     )
   }
