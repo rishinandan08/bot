@@ -157,9 +157,9 @@ const steps=[
 class chatbot extends Component {
   logout = ()=>{
     //console.log("cookie",document.cookie);
-    document.cookie = "1P_JAR=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "PHPSESSID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     window.location.reload();
-    document.cookie.remove('1P_JAR');
+    document.cookie.remove('PHPSESSID');
   }
   handleClear = () => {
   this.setState({ clear: true }, () => {
@@ -169,7 +169,8 @@ class chatbot extends Component {
   render () {
     return (
       <div>
-
+        {document.cookie.indexOf('PHPSESSID') === 0?
+        <>
 
             <div class="w3-top">
               <div class="w3-bar w3-blue w3-card" id="myNavbar">
@@ -191,7 +192,8 @@ class chatbot extends Component {
             />;
             </ThemeProvider>
 
-
+      </>
+      : window.location.replace('https://humanizerbot.herokuapp.com/') }
       </div>
     )
   }

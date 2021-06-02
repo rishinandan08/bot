@@ -6,7 +6,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HUMANIZER BOT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -278,11 +282,13 @@
         </p>
       </form>
       <div id="status"></div>
-      <!-- Image of location/map -->
-      <map name="imagemap">
-        <area shape="circle" coords="600,520,60" href="https://www.google.com/maps/place/Faculty+of+Engineering+and+Technology+-+(FET+JU)/@12.6409923,77.4412916,1530a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x0:0x424bdd92f039db75!8m2!3d12.6421763!4d77.4399964" alt="Jain University Global Campus" target="_blank">
-      </map>
-      <img src="img/map.png" class="w3-image w3-greyscale-min" style="width:100%;margin-top:48px" usemap="#imagemap">
+      <div>
+        <!-- Image of location/map -->
+        <map name="imagemap">
+          <area shape="circle" coords="600,520,60" href="https://www.google.com/maps/place/Faculty+of+Engineering+and+Technology+-+(FET+JU)/@12.6409923,77.4412916,1530a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x0:0x424bdd92f039db75!8m2!3d12.6421763!4d77.4399964" alt="Jain University Global Campus" target="_blank">
+        </map>
+        <img src="img/map.png" class="w3-image w3-greyscale-min" style="width:100%;margin-top:48px" usemap="#imagemap">
+      s</div>
     </div>
   </div>
 
