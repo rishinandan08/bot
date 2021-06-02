@@ -178,7 +178,7 @@
       </div>
       <div class="w3-col l3 m12 w3-margin-bottom">
         <div class="w3-card">
-          <img src="img/shruthi1.jpeg" alt="shruthi" style="width:100%">
+          <img src="img/Shruthi1.jpeg" alt="shruthi" style="width:100%">
           <div class="w3-container">
             <h3>Shruthi Satish Kumar</h3>
             <p class="w3-opacity">TEAM MEMBER</p>
