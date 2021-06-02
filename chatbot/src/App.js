@@ -169,8 +169,7 @@ class chatbot extends Component {
   render () {
     return (
       <div>
-        {document.cookie.indexOf('1P_JAR') === 0?
-        <>
+
 
             <div class="w3-top">
               <div class="w3-bar w3-blue w3-card" id="myNavbar">
@@ -192,8 +191,7 @@ class chatbot extends Component {
             />;
             </ThemeProvider>
 
-      </>
-      : window.location.replace('https://humanizerbot.herokuapp.com/') }
+
       </div>
     )
   }
