@@ -62,7 +62,10 @@
         }
         else
         {
-          $message = '<label>Incorrect</label>';
+              echo '<script language="javascript">';
+              echo 'alert("Invalid Username or Password")';
+              echo '</script>';
+                 
         }
       }
     }
@@ -281,6 +284,7 @@
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
       <div class="w3-display-left w3-text-black" style="padding:48px">
+        <?php if(isset($message)){echo '<label>'.$message.'</label>';}?>
         <span class="w3-jumbo w3-hide-small w3-padding-large w3-large w3-margin-top w3-opacityy w3-hover-opacity-off" style="border-radius:20px" >Welcome To <br> Humanizer Bot</span><br>
         <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome To Humanizer Bot</span><br><br>
         <span class="w3-large">Get info from anywhere anytime with one click.</span>
