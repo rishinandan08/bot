@@ -42,6 +42,9 @@
     padding-top: 4em;
     text-align: center;
   }
+  a:link {
+    text-decoration: none;
+  }
   @keyframes bg-pulse {
     0% {
       background-color: #fff;
