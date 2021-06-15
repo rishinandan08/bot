@@ -34,6 +34,9 @@
       background-size: cover;
       min-height: 100%;
     }
+    a:link {
+      text-decoration: none;
+    }
     /*Success mgg status*/
     #status {
       width: 90%;

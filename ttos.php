@@ -20,6 +20,9 @@
   .w3-bar .w3-button {
     padding: 16px;
   }
+  a:link {
+    text-decoration: none;
+  }
   </style>
 
   <body>
