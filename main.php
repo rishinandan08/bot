@@ -288,7 +288,7 @@
           <area shape="circle" coords="600,520,60" href="https://www.google.com/maps/place/Faculty+of+Engineering+and+Technology+-+(FET+JU)/@12.6409923,77.4412916,1530a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x0:0x424bdd92f039db75!8m2!3d12.6421763!4d77.4399964" alt="Jain University Global Campus" target="_blank">
         </map>
         <img src="img/map.png" class="w3-image w3-greyscale-min" style="width:100%;margin-top:48px" usemap="#imagemap">
-      s</div>
+      </div>
     </div>
   </div>
 

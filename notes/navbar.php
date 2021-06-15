@@ -16,7 +16,7 @@
     <div class="w3-top">
       <div class="w3-bar w3-blue w3-card" id="myNavbar">
         <a href="../main.php" class="w3-bar-item w3-button w3-wide">RANS</a>
-        <a href="../bot.php" class="w3-bar-item w3-button w3-left">BOT</a>
+        <a href="../chatbot/build/index.html" class="w3-bar-item w3-button w3-left">BOT</a>
         <a href="homepage.php" class="w3-bar-item w3-button w3-left">THE NOTES</a>
         <a href="../logout.php" class="w3-bar-item w3-button w3-right w3-black"><i class="fa fa-lock"></i> LOGOUT</a>
       </div>

@@ -1,0 +1,345 @@
+[
+  {
+    "coursename": "Engineering Mathematics-1",
+    "courseid":"18BS3MA01",
+    "year":" 1st year",
+    "sem":"Chemistry Cycle",
+    "professor":"Vishwanatha.S",
+    "creadits":"04",
+    "hours":"45+15"
+  },
+  {
+    "coursename": "Chemistry",
+    "courseid":":18BSCH03",
+    "year":" 1st year",
+    "sem":"Chemistry Cycle",
+    "professor":"Dr. Pandiarajan Devaraj",
+    "creadits":"04",
+    "hours":"60"
+  },
+  {
+    "coursename": "Basic of Electrical Engineering",
+    "courseid":"18ESCEE02",
+    "year":" 1st year",
+    "sem":"Chemistry Cycle",
+    "professor":"Asst Prof. Shreenidhi H S",
+    "creadits":"04",
+    "hours":"45"
+  },
+  {
+    "coursename": "Sociology",
+    "courseid":"18HSSC02",
+    "year":" 1st year",
+    "sem":"Chemistry Cycle",
+    "professor":"Dr. R T Nanda",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Engineering Mathematics-2",
+    "courseid":"18BS2MA01",
+    "year":" 1st year",
+    "sem":"Physics Cycle",
+    "professor":"Dr. Anita Chaturvedi",
+    "creadits":"04",
+    "hours":"60"
+  },
+  {
+    "coursename": "Physics",
+    "courseid":"18BSPH02",
+    "year":" 1st year",
+    "sem":"Physics Cycle",
+    "professor":"Prof. Maruthi N",
+    "creadits":"04",
+    "hours":"45"
+  },
+  {
+    "coursename": "English",
+    "courseid":"18HSS01",
+    "year":" 1st year",
+    "sem":"Physics Cycle",
+    "professor":"Ms. Monika Anand",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Engineering Graphics",
+    "courseid":"18ESME03",
+    "year":" 1st year",
+    "sem":"Physics Cycle",
+    "professor":"Mr. P S Raghavendra Rao",
+    "creadits":"04",
+    "hours":"45"
+  },
+  {
+    "coursename": "Problem Solving Through Programming",
+    "courseid":"18ESCS01",
+    "year":" 1st year",
+    "sem":"Physics Cycle",
+    "professor":"Dr. Devraj Verma C",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Mathematical for Computer Science",
+    "courseid":"18BS3CS02",
+    "year":" 2nd year",
+    "sem":"3rd sem ",
+    "professor":"Dr. Vimala T",
+    "creadits":"04",
+    "hours":"60"
+  },
+  {
+    "coursename": "Data Structures using C",
+    "courseid":"18CSI301",
+    "year":" 2nd year",
+    "sem":"3rd sem ",
+    "professor":"Asst Prof.Ashwini Maturi",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Digital Electronis",
+    "courseid":"18CS3SP03",
+    "year":" 2nd year",
+    "sem":"3rd sem ",
+    "professor":"Asst Prof. Shreenidhi H S",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "OOPS using java",
+    "courseid":"18CSI302",
+    "year":" 2nd year",
+    "sem":"3rd sem ",
+    "professor":"Ms.Anurenjini R",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Economics for Engineering",
+    "courseid":"18HSS03",
+    "year":" 2nd year",
+    "sem":"3rd sem ",
+    "professor":"Prof. R Pazhanisamy",
+    "creadits":"04",
+    "hours":"45"
+  },
+  {
+    "coursename": "Linear Algebra and Vector Spaces",
+    "courseid":"18BS4AD01",
+    "year":" 2nd year",
+    "sem":"4th sem" ,
+    "professor":"Dr. Vimala T",
+    "creadits":"04",
+    "hours":"60"
+  },
+  {
+    "coursename": "Database Management System",
+    "courseid":"18CS4SP04",
+    "year":" 2nd year",
+    "sem":"4th sem" ,
+    "professor":"Asst Prof. Silvia Rose",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Operating System",
+    "courseid":"18CS4SP05",
+    "year":" 2nd year",
+    "sem":"4th sem" ,
+    "professor":"Dr. Devraj Verma C",
+    "creadits":"04",
+    "hours":"60"
+  },
+  {
+    "coursename": "Computer Organization and Architecture",
+    "courseid":"18CS4SP06",
+    "year":" 2nd year",
+    "sem":"4th sem" ,
+    "professor":"Dr. Ravikanth Verma",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Design & Analysis of Algorithms",
+    "courseid":"18CSI401",
+    "year":" 2nd year",
+    "sem":"4th sem" ,
+    "professor":"??",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Business Communication and Presentation Skills",
+    "courseid":"18HSS04",
+    "year":" 2nd year",
+    "sem":"4th sem" ,
+    "professor":"??",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "ARTIFICIAL INTELLIGENCE",
+    "courseid":"18CS5AI01",
+    "year":" 3rd year",
+    "sem":"5th sem" ,
+    "professor":"Dr. Devraj Verma C",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Big Data Management",
+    "courseid":"18CS5AI02",
+    "year":" 3rd year",
+    "sem":"5th sem" ,
+    "professor":"Prof. Tanvir H Sardar",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Computer Networks",
+    "courseid":"18CS5SP07",
+    "year":" 3rd year",
+    "sem":"5th sem" ,
+    "professor":"Asst prof.Sujeeth Kumar",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "IT Workshop(Python)",
+    "courseid":"18CS5SP08L",
+    "year":" 3rd year",
+    "sem":"5th sem" ,
+    "professor":"Dr.Stalin Alex",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Human Computer Interaction",
+    "courseid":"18CS5AI03",
+    "year":" 3rd year",
+    "sem":"5th sem" ,
+    "professor":"Dr.Raja Praveen.N",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Statistics Using R",
+    "courseid":"18BS5AI01",
+    "year":" 3rd year",
+    "sem":"5th sem" ,
+    "professor":"Mr.Vishwanatha.S",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "Speech Processing(Elective 1)",
+    "courseid":"18AI5DE12",
+    "year":" 3rd year",
+    "sem":"5th sem" ,
+    "professor":"Ms.Shyla.N",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "TOC(Elective 1)",
+    "courseid":"18CT5DE11",
+    "year":" 3rd year",
+    "sem":"5th sem" ,
+    "professor":"Mr. Kidiyappa Maddennavar",
+    "creadits":"??",
+    "hours":"??"
+  },
+  {
+    "coursename": "SENSOR TECHNOLOGIES",
+    "courseid":"18CS6AI04",
+    "year":" 3rd year",
+    "sem":"6th sem" ,
+    "professor":"Ms.Shyla.N",
+    "creadits":"04",
+    "hours":"60"
+  },
+  {
+    "coursename": "LOGIC PROGRAMMING AND KNOWLEDGE REPRESENTATION ",
+    "courseid":"18CS6AI05",
+    "year":" 3rd year",
+    "sem":"6th sem" ,
+    "professor":"Dr. Devraj Verma C",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "COMPUTER VISION AND PATTERN RECOGNITION WITH MACHINE LEARNING",
+    "courseid":"18CS6AI06",
+    "year":" 3rd year",
+    "sem":"6th sem" ,
+    "professor":"Dr.Bishwa Mohan Sahoo",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "INFORMATION SECURITY",
+    "courseid":"18AI6OECT01",
+    "year":" 3rd year",
+    "sem":"6th sem" ,
+    "professor":"Mrs. Staffi M",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "WEB PROGRAMMING",
+    "courseid":"18AI6OEMA01",
+    "year":" 3rd year",
+    "sem":"6th sem" ,
+    "professor":"Ms.Anurenjini R",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "AGILE SOFTWARE DEVELOPMENT",
+    "courseid":"18AI6OESE02",
+    "year":" 3rd year",
+    "sem":"6th sem" ,
+    "professor":"Mr.Saurab Sinha",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "NATURAL LANGUAGE PROCESSING",
+    "courseid":"18AI6DE31",
+    "year":" 3rd year",
+    "sem":"6th sem" ,
+    "professor":"Mrs. Tamil Selvi",
+    "creadits":"04",
+    "hours":"60"
+  },
+  {
+    "coursename": "FUZZY LOGIC AND APPLICATION",
+    "courseid":"18AI6DE21",
+    "year":" 3rd year",
+    "sem":"6th sem" ,
+    "professor":"Dr Jitendra Jaiswal",
+    "creadits":"03",
+    "hours":"45"
+  },
+  {
+    "coursename": "DATA MINING",
+    "courseid":"18AI6DE23",
+    "year":" 3rd year",
+    "sem":"6th sem" ,
+    "professor":"Asst prof. Meenakshi S",
+    "creadits":"03",
+    "hours":"45"
+  },
+
+  {
+    "coursename": "??",
+    "courseid":"??",
+    "year":" year ??",
+    "sem":"??",
+    "professor":"??",
+    "creadits":"??",
+    "hours":"??"
+  }
+]

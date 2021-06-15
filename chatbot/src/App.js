@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import ChatBot from 'react-simple-chatbot';
+import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import DBPedia from './posts/restart.js'
 import Sname from './posts/StudentName';
 import Sid from './posts/Studentid';
 import Pname from './posts/professor';
+import Subid from './posts/subjectid';
+import Subname from './posts/subjectname';
+import Subsem from './posts/Subjectsem';
 import Bot from './data/bot_img.jpg';
 import User from './data/me.jpeg';
 
@@ -26,6 +30,20 @@ const config ={
   width: "450px",
   height: "500px",
   floating: true,
+};
+
+const input = (props) => {
+  const { steps } = props;
+  const studentid = steps.inputid.value;
+  const studentname = steps.inputname.value;
+}
+
+input.propTypes = {
+  steps: PropTypes.object,
+};
+
+input.defaultProps = {
+  steps: undefined,
 };
 
 const steps=[
@@ -59,7 +77,7 @@ const steps=[
         options: [
           { value: 1, label: 'Student Information', trigger: 'student' },
           { value: 2, label: 'professor Information', trigger: 'professor' },
-          { value: 3, label: 'Subject Information', trigger: 'Subject' },
+          { value: 3, label: 'Course Details', trigger: 'Subject' },
           { value: 4, label: 'Study Materials', trigger: 'notes'},
           { value: 5, label: 'Conversation', trigger: 'convert'},
         ],
@@ -72,10 +90,20 @@ const steps=[
         ],
       },
       {
+        id: 'inputid',
+        user:true,
+        trigger: 'Student_id',
+      },
+      {
         id: 'Student_id',
         component: <Sid />,
         asMessage: true,
         trigger: 'continue',
+      },
+      {
+        id: 'inputname',
+        user:true,
+        trigger: 'Student_name',
       },
       {
         id: 'Student_name',
@@ -91,12 +119,33 @@ const steps=[
       },
       {
         id: 'Subject',
-        message: 'Enter the id of the Subject',
-        trigger: 'test',
+        options: [
+          { value: 1, label: 'ID of Subject', trigger: 'Subject_id'},
+          { value: 2, label: 'Name of Subject', trigger: 'Subject_name'},
+          { value: 3, label: 'Semester', trigger: 'Subject_sem'},
+        ],
+      },
+      {
+        id: 'Subject_id',
+        component: <Subid />,
+        asMessage: true,
+        trigger: 'continue',
+      },
+      {
+        id: 'Subject_name',
+        component: <Subname />,
+        asMessage: true,
+        trigger: 'continue',
+      },
+      {
+        id: 'Subject_sem',
+        component: <Subsem />,
+        asMessage: true,
+        trigger: 'continue',
       },
       {
         id: 'notes',
-        component: <a href="https://humanizerbot.herokuapp.com/notes/homepage.php" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="https://humanizerbot.herokuapp.com/notes/homepage.php"  rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
@@ -109,13 +158,13 @@ const steps=[
       },
       {
         id: 'stt',
-        component: <a href="https://humanizerbot.herokuapp.com/converter.php" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="https://humanizerbot.herokuapp.com/converter.php"  rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
       {
         id: 'tts',
-        component: <a href="https://humanizerbot.herokuapp.com/ttos.html" target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="https://humanizerbot.herokuapp.com/ttos.php"  rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
