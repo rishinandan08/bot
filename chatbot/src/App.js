@@ -153,7 +153,7 @@ const steps=[
         id: 'convert',
         options: [
           { value:1, label:'Take Note',alt:'Using Speech to text Conversation' , trigger:'stt' },
-          { value:2, label:'Text to Speech', trigger:'tts' }
+          { value:2, label:'Read Aloud', trigger:'tts' }
         ],
       },
       {
