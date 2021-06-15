@@ -64,11 +64,14 @@ body, html {
             <li><br><a href="soon.php">Fuzzy Logic And Application</a></li>
             <li><br><a href="soon.php">Data Mining</a></li>
             <li><br><a href="soon.php">Natural Language processing</a></li>
-            <li><br><a href="soon.php">Real Time Data Processing</a></li>
-            <li><br><a href="soon.php">Probabilistic Graphical Methods</a></li>
-            <li><br><a href="soon.php">Digital Image processing</a></li>
-            <li><br><a href="soon.php">Computer Graphics</a></li>
-            <li><br><a href="soon.php">Data Visualization</a></li>
+            <li><br><a href="soon.php">Logic Programming and Knowledge Representation</a></li>
+            <li><br><a href="soon.php">Computer Vision and Pattern Recogition with Machine Learning</a></li>
+            <li><br><a href="soon.php">Information Security</a></li>
+            <li><br><a href="soon.php">Web Programming</a></li>
+            <li><br><a href="soon.php"></a>Agile Software Development</li>
+            <li><br><a href="soon.php"></a>Natural Language Processing</li>
+            <li><br><a href="soon.php"></a>Fuzzy Logic and Application</li>
+            <li><br><a href="soon.php"></a>Data Mining</li>
           </ul>
         </div>
       </div>

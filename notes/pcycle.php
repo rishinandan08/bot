@@ -141,6 +141,16 @@ body, html {
       </div>
     </div>
 
+    <div class="w3-container" id="eg">
+      <h4 class="w3-center">Engineering Graphics</h4>
+      <div class="padding:25px 16px">
+        <div class="doc">
+          <p>Notes</p>
+          <iframe src="files/eg notes.pdf"></iframe>
+        </div>
+      </div>
+    </div>
+
     <div class="w3-container" id="psp">
       <h4 class="w3-center">Problem Solving Through Programming</h4>
       <div style="padding:25px 16px">
