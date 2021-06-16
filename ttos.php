@@ -30,48 +30,32 @@
       <div class="w3-bar w3-blue w3-card" id="myNavbar">
         <a href="main.php" class="w3-bar-item w3-button w3-wide">RANS</a>
         <!-- Right-sided navbar links -->
-        <div class="w3-hide-small w3-hide-medium">
           <a href="chatbot/build/" class="w3-bar-item w3-button w3-left">BOT</a>
-          <a href="#show" class="w3-bar-item w3-button w3-wide w3-left">NOTES</a>
           <a href="logout.php" class="w3-bar-item w3-button w3-right w3-black"><i class="fa fa-lock"></i> LOGOUT</a>
-        </div>
-
-        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="_open()">
-        <i class="fa fa-bars"></i>
-        </a>
       </div>
     </div>
 
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="w3-sidebar w3-bar-block w3-blue w3-card w3-animate-left w3-hide-large" style="display:none" id="mySidebar">
-      <a href="javascript:void(0)" onclick="_close()" class="w3-bar-item w3-button w3-large w3-padding-16 w3-black">Close ×</a>
-      <a href="chatbot/build/" class="w3-bar-item w3-button w3-left">BOT</a>
-      <a href="#show" class="w3-bar-item w3-button w3-wide">NOTES</a>
-      <a href="logout.php" class="w3-bar-item w3-button w3-right w3-black"><i class="fa fa-lock"></i> LOGOUT</a>
-    </nav>
-
-    <main class="container">
+    <main class="container l3 m12">
       <br><br><br>
       <h1 class="w3-center">Read Aloud</h1>
-      <p class="lead mt-4">Select Voice</p>
+      <p class="lead">Select Voice</p>
 
       <!-- Select Menu for Voice -->
       <select id="voices" class="form-select"></select>
 
       <!-- Range Slliders for Volume, Rate & Pitch -->
-      <div class="d-flex mt-4 text-dark">
-        <div>
+      <div class=" w3-row-padding mt-2 text-dark">
+        <div class="w3-col l3 m6">
           <p class="lead">Volume</p>
           <input type="range" min="0" max="1" value="1" step="0.1" id="volume" />
           <span id="volume-label" class="ms-2">1</span>
         </div>
-        <div class="mx-5">
+        <div class="w3-col l3 m6">
           <p class="lead">Rate</p>
           <input type="range" min="0.1" max="10" value="1" id="rate" step="0.1" />
           <span id="rate-label" class="ms-2">1</span>
         </div>
-        <div>
+        <div class="w3-col l3 m6">
           <p class="lead">Pitch</p>
           <input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
           <span id="pitch-label" class="ms-2">1</span>
