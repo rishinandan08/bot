@@ -145,7 +145,7 @@ const steps=[
       },
       {
         id: 'notes',
-        component: <a href="https://humanizerbot.herokuapp.com/notes/homepage.php"  rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="https://humanizerbot.herokuapp.com/notes/homepage.php"  target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
@@ -158,13 +158,13 @@ const steps=[
       },
       {
         id: 'stt',
-        component: <a href="https://humanizerbot.herokuapp.com/converter.php"  rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="https://humanizerbot.herokuapp.com/converter.php"  target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
       {
         id: 'tts',
-        component: <a href="https://humanizerbot.herokuapp.com/ttos.php"  rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
+        component: <a href="https://humanizerbot.herokuapp.com/ttos.php"  target="_blank" rel="noreferrer" class="w3-button w3-blue w3-hover-blue">Go to the page<br/>(Click here)</a>,
         asMessage: true,
         trigger: 'continue',
       },
