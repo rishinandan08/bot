@@ -56,27 +56,27 @@ body, html {
       <div style="padding:25px 16px">
         <div class="doc">
           <p>Syllabus</p>
-          <iframe src="files/m2/M2 syllabus.pdf"></iframe>
+          <iframe src="files/M2/M2 syllabus.pdf"></iframe>
         </div>
         <div class="doc">
           <p>Module 1</p>
-          <iframe src="files/m2/M2-Module-1.pdf"></iframe>
+          <iframe src="files/M2/M2-Module-1.pdf"></iframe>
         </div>
         <div class="doc">
           <p>Module 2</p>
-          <iframe src="files/m2/M2-Module-2.pdf"></iframe>
+          <iframe src="files/M2/M2-Module-2.pdf"></iframe>
         </div>
         <div class="doc">
           <p>Module 3</p>
-          <iframe src="files/m2/M2-Module-3.pdf"></iframe>
+          <iframe src="files/M2/M2-Module-3.pdf"></iframe>
         </div>
         <div class="doc">
           <p>Module 4</p>
-          <iframe src="files/m2/M2-Module-4.pdf"></iframe>
+          <iframe src="files/M2/M2-Module-4.pdf"></iframe>
         </div>
         <div class="doc">
           <p>Module 5</p>
-          <iframe src="files/m2/M2-Module-5.pdf"></iframe>
+          <iframe src="files/M2/M2-Module-5.pdf"></iframe>
         </div>
       </div>
     </div>
