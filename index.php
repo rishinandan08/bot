@@ -25,9 +25,9 @@
   // }
 
     $host="remotemysql.com";
-    $username="AQcSrmYT6v";
-    $password="royIHp4kxd";
-    $database="AQcSrmYT6v";
+    $username="1mdmqdTThH";
+    $password="6Dcp5x5nD3";
+    $database="1mdmqdTThH";
     $message="";
   try{
     $connect = new PDO("mysql:host=$host; dbname=$database", $username,$password);
